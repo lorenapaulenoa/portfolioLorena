@@ -37,8 +37,8 @@ export const Principal = () => {
         </div>
         <div className='tres'>
           <p className='titulo'> PROYECTOS BACKEND</p>
-          <CardPeque2 text='Proyecto1 - SQL' url='https://github.com/lorenapaulenoa' img={github} />
-          <CardPeque2 text='Proyecto2 - JAVA' url='https://github.com/lorenapaulenoa' img={github} />
+          <CardPeque2 text='Proyecto1 - SQL' url='https://github.com/lorenapaulenoa/SQL' img={github} />
+          <CardPeque2 text='Proyecto2 - JAVA' url='https://github.com/lorenapaulenoa/JAVA' img={github} />
         </div>
         <div className='cuatro'>
           <p className='titulo'>SKILLS</p>
@@ -64,8 +64,8 @@ export const Principal = () => {
         </div>
         <div className='siete'>
           <p className='titulo'> PROYECTOS FRONTEND</p>
-          <CardPeque2 text='Proyecto3 - JAVASCRIPT' url='https://github.com/lorenapaulenoa' img={github} />
-          <CardPeque2 text='Proyecto4 - REACT' url='https://github.com/lorenapaulenoa' img={github} />
+          <CardPeque2 text='Proyecto3 - JAVASCRIPT' url='https://github.com/lorenapaulenoa/JAVASCRIPT' img={github} />
+          <CardPeque2 text='Proyecto4 - REACT' url='https://github.com/lorenapaulenoa/portfolioLorena' img={github} />
         </div>
       </div>
     </div>
