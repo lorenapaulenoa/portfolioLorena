@@ -16,8 +16,8 @@
     line-height: 30px;
     text-align: center;
     /* padding-top: 20px; */
-    background: rgb(36, 36, 36);
-    border: solid black 4px;
+    background: #637373;
+    border: solid #637373 15px;
     
 }
 
@@ -32,40 +32,41 @@
 
 .contenedor {
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 15px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(16,1fr);
 }
 
 .contenedor .uno {
-    background: rgb(243, 243, 237);
+    background: #ff9a76;
     grid-row-start: 1;
     grid-row-end: 8;
     
 }
 .contenedor .dos {
-    background: rgb(243, 243, 237);
+    background: #ffeadb;
     grid-row-start: 1;
     grid-row-end: 7;
     grid-column-start: 2;
     grid-column-end: 4;
-    background-image: url('./assets/imagenes/fotoCV6.png');
+    /* background-image: url('./assets/imagenes/fotoCV6.png');
     background-repeat: no-repeat;
-    background-position: right;
-    text-align: left;
+    background-position: right; */
+    text-align: center;
 
 }
 .contenedor .tres {
-    background: rgb(243, 243, 237);
+    background: #679b9b;
     grid-row-start: 1;
     grid-row-end: 9;
 
 }
 .contenedor .cuatro {
-    background: rgb(243, 243, 237);
+    background: #679b9b;
     grid-row-start: 8;
     grid-row-end: 17;
     padding: 5px;
+    font-size: 12px;
 }
 
 .contenedor .cinco {
@@ -78,15 +79,17 @@
 }
 
 .contenedor .seis {
-    background: rgb(243, 243, 237);
+    background: #ff9a76;
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 13;
     grid-row-end: 17;
+    
+    
 }
 
 .contenedor .siete {
-    background: rgb(243, 243, 237);
+    background: #ffeadb;
     grid-row-start: 9;
     grid-row-end: 17;
 }
@@ -101,6 +104,8 @@
     text-align: justify;
     margin: 15px;
     font-weight: 600;
+    line-height: 40px;
+
 }
 
 .tituloGrande {
@@ -141,4 +146,20 @@ img {
 .logoEmail {
     margin-left: 100px;
     margin-top: 100px;
+}
+
+.foto {
+    height: 180px;
+   
+
+}
+
+.botonesYfoto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+}
+
+.email {
+    font-size: 10px;
 }

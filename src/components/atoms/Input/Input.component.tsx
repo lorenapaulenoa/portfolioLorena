@@ -1,23 +1,21 @@
 
+import React from 'react'
+
 
 interface InputProps {
-  text?: String,
-  type?: 'text' | 'email' | 'password',
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void,
-  error?: boolean,
-  name?: string,
+  labelText?: string,
   value?: string,
-  style?: string;
+  type?: "text" | "password" | "email",
+  error?: boolean,
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void,
 }
 
-export const Input: React.FC<InputProps> = ({ text, type, error=false, onChange, value, name}) => {
 
-
+export const Input: React.FC<InputProps> = ({ labelText, value, type = "text", error = false, onChange }) => {
   return (
     <>
-      <label className="font-bold text-base text-black-600 underline mr-4" >{text}</label>
-      <input value={value} name={name} type={type} onChange={onChange} className={error ? "border-red-500 border-solid border-2 rounded-lg ml-3 m-3 w-80" : "border-black border-solid border-2 rounded-lg ml-3 m-3 w-80" }/>
+      <label className="font-semibold">{labelText}</label>
+      <input onChange={onChange} type={type} value={value} className={error ? "rounded p2 mb1 border-red-500 border-solid border-2" : "rounded p-2 -mb-1"} />
     </>
   )
 }
-

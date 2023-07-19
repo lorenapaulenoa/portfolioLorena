@@ -1,45 +1,71 @@
 import { Button } from "../components/atoms/Button/Button.component";
-import { Input } from "../components/atoms/Input/Input.component";
+import { Input2 } from "../components/atoms/Input/Input2.component";
 import { useForm } from "../hooks/useForm.hooks";
+import { useNavigate } from 'react-router-dom';
+import { User } from "./Login";
+import { FormEvent, useContext } from 'react';
 
 
-interface FormI {
+
+interface RegisterData {
   name?: string,
-  surname: string,
   email: string,
-  password1: string,
-  password2: string,
+  password: string,
+  role: string,
 
 }
 
+const initialRegisterData: RegisterData = { name: '', email: '', password: '', role: 'ADMIN_ROLE' };
+
 export const Registro = () => {
 
-  const initialFormState: FormI = {
-    name: '',
-    surname: '',
-    email: '',
-    password1: '',
-    password2: '',
 
+  const { formData, onChange, resetForm } = useForm<RegisterData>(initialRegisterData);
+
+  const navigate = useNavigate();
+
+  const onSubmit = async (e?: FormEvent) => {
+
+    e?.preventDefault();
+
+    try {
+      const resp = await fetch('https://noderestserver-production-241a.up.railway.app/api/v1/users/',
+        {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json; charset=UTF-8',
+          },
+          body: JSON.stringify(formData)
+        });
+      const data: User = await resp.json()
+      if (!!data?.uid) {     // dos !! es para confirmar algo
+        navigate('/login');
+      }
+    } catch (e) {
+    }
   }
 
-  const {formData, onChange, resetForm} = useForm<FormI>(initialFormState);
 
   return (
     <main className="flex w-screen h-screen items-center justify-center">
       <div className="flex flex-col w-2/4 ">
-        <div className="flex flex-col p-5 rounded bg-sky-200 w-4/6 sm:w-full">
-          <h1 className="text-center font-bold text-black text-2x1">Formulario de Registro</h1>
-          <Input text='Nombre' name='name' type='text' value={formData.name} onChange={onChange} />
-          <Input text='Apellidos' name= 'surname' type='text' value={formData.surname} onChange={onChange} />
-          <Input text='Correo electrónico' name= 'email' type='email' value={formData.email} onChange={onChange} />
-          <Input text='Contraseña' name= 'password1' type='password' value={formData.password1} onChange={onChange} />
-          <Input text='Repetir contraseña' name= 'password2' type='password' value={formData.password2} onChange={onChange} />
-          <div className=" flex flex-row mx-8 items-center justify-center" >
-            <Button text='Registrarse' type="submit" color='orange'  />
-            <Button text='Borrar' type="reset" color='white' onClick={resetForm}/>
+        <form onSubmit={onSubmit}>
+          <div className="flex flex-col p-5 rounded bg-teal-600 w-4/6 sm:w-full">
+            <h1 className="text-center font-bold text-black text-2x1">Formulario de Registro</h1>
+            <Input2 text='Nombre' name='name' type='text' value={formData.name} onChange={onChange} />
+
+            <Input2 text='Correo electrónico' name='email' type='email' value={formData.email} onChange={onChange} />
+            <Input2 text='Contraseña' name='password' type='password' value={formData.password} onChange={onChange} />
+
+            <div className=" flex flex-row mx-8 items-center justify-center" >
+              <Button text='Registrarse' type="submit" />
+              <Button text='Borrar' type="reset" onClick={resetForm} />
+              <Button text='Login' onClick={() => navigate('/login')} />
+              <Button text="Principal" onClick={() => navigate('/')} />
+            </div>
           </div>
-        </div>
+        </form>
+
       </div>
     </main>
   )
