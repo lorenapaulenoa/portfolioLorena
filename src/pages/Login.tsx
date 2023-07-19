@@ -63,7 +63,7 @@ export const Login = () => {
     <main className="flex w-screen h-screen items-center justify-center bg-gradient-to-r from-teja to-beige">
       <div className="flex flex-col w-2/4 ">
         <div className="flex flex-col p-5 rounded-xl bg-verde/80 w-4/6 sm:w-full">
-          <h1 className="text-center font-bold text-black text-2x1">INTRODUCE DATOS DE USUARIO</h1>
+          <h1 className="text-center font-bold text-black text-2x1 my-4">INTRODUCE DATOS DE USUARIO</h1>
 
           <Input2 value={formData.email} onChange={onChange} text='Correo electrónico' name='email' type='email' />
           <Input2 value={formData.password} onChange={onChange} text='Contraseña' name='password' type='password' />

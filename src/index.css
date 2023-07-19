@@ -110,9 +110,10 @@
 
 .tituloGrande {
     font-size: 23px;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-left: 10px;
     font-weight: 700;
+    margin-bottom: 40px;
 }
 
 .datosContacto {
@@ -149,7 +150,7 @@ img {
 }
 
 .foto {
-    height: 180px;
+    height: 160px;
    
 
 }
@@ -161,5 +162,5 @@ img {
 }
 
 .email {
-    font-size: 10px;
+    font-size: 12px;
 }

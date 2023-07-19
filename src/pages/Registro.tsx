@@ -51,7 +51,7 @@ export const Registro = () => {
       <div className="flex flex-col w-2/4 ">
         <form onSubmit={onSubmit}>
           <div className="flex flex-col p-5 rounded-xl bg-verde/80 w-4/6 sm:w-full">
-            <h1 className="text-center font-bold text-black text-2x1">FORMULARIO DE REGISTRO</h1>
+            <h1 className="text-center font-bold text-black text-2x1 my-4">FORMULARIO DE REGISTRO</h1>
             <Input2 text='Nombre y Apellidos' name='name' type='text' value={formData.name} onChange={onChange} />
 
             <Input2 text='Correo electrónico' name='email' type='email' value={formData.email} onChange={onChange} />

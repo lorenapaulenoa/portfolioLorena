@@ -178,7 +178,9 @@ export const Tiempo = () => {
       
 
   return (
+    
     <div className='flex flex-col justify-center items-center bg-gradient-to-r from-teja to-beige h-screen w-screen'>
+      <h1 className='text-4xl mb-10'>PREDICCIÓN METEOROLÓGICA</h1>
       <div className='w-3/6 shadow-black shadow-2xl bg-verde/80 max-w-screen-md rounded-xl flex flex-col justify-center items-center p-5' >
           <div className='flex flex-col min-h-1/3 gap-10 w-screen justify-center items-center'>
             <img src={data?.current.condition.icon} alt={data?.current.condition.text} />
