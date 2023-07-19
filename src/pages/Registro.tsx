@@ -56,9 +56,10 @@ export const Registro = () => {
 
             <Input2 text='Correo electrónico' name='email' type='email' value={formData.email} onChange={onChange} />
             <Input2 text='Contraseña' name='password' type='password' value={formData.password} onChange={onChange} />
-
-            <h1>¿Ya tienes una cuenta?</h1>
-          <a href="" onClick={() => navigate('/login')} ><h1 className="font-bold text-black text-sm underline">Login</h1></a>
+            <div className="flex flex-row">
+                <h1>¿Ya tienes una cuenta?</h1>
+                <button type="button" onClick={() => navigate('/login')}><h1 className="underline ml-4">Login</h1></button>
+            </div>
             <div className=" flex flex-row mx-8 items-center justify-between" >
               <Button text='Registrarse' type="submit" />
               <Button text='Borrar' type="reset" onClick={resetForm} />

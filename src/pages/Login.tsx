@@ -67,9 +67,11 @@ export const Login = () => {
 
           <Input2 value={formData.email} onChange={onChange} text='Correo electrónico' name='email' type='email' />
           <Input2 value={formData.password} onChange={onChange} text='Contraseña' name='password' type='password' />
-          <h1>¿No tienes una cuenta?</h1>
-          <a href="" onClick={() => navigate('/registro')} ><h1 className="font-bold text-black text-sm underline">Registrarse</h1></a>
-
+            <div className="flex flex-row"> 
+               <h1>¿No tienes una cuenta?</h1>
+               <button type="button" onClick={() => navigate('/registro')}><h1 className="underline ml-4">Registrarse</h1></button>
+            </div>
+          
           <div className=" flex flex-row mx-8 items-center justify-between" >
             <Button text='Iniciar Sesión' type="reset" onClick={onSubmit} />
             <Button text='Borrar' type="reset" onClick={resetForm} />
