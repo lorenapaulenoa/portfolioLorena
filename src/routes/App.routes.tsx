@@ -16,7 +16,7 @@ export const AppRoutes = () => {
           <Route path="/tiempo" element={<Tiempo />}/>
         </Route>
         <Route path="*" element={<NoEncontrado />}/>
-        <Route path="/porfolioLorena" element={<Navigate to ={"/"} />}/>
+        <Route path="/portfolioLorena" element={<Navigate to ={"/"} />}/>
 
 
     </Routes>
