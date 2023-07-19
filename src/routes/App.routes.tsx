@@ -10,15 +10,13 @@ export const AppRoutes = () => {
   return (
     <Routes>
         <Route path="/" element={<Principal />}/>
+        <Route path="/portfolioLorena" element={<Navigate to ={"/"} />}/>
         <Route path="/registro" element={<Registro />}/>
         <Route path="/login" element={<Login />}/>
         <Route element={<ProtectedRoutes />}>
           <Route path="/tiempo" element={<Tiempo />}/>
         </Route>
         <Route path="*" element={<NoEncontrado />}/>
-        <Route path="/portfolioLorena" element={<Navigate to ={"/"} />}/>
-
-
     </Routes>
   )
 }
