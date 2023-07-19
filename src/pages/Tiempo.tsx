@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Input } from '../components/atoms/Input/Input.component';
 import { Boton } from '../components/atoms/Button/Boton.componentes';
 import { CardPeque } from '../components/atoms/Cards/CardPeque';
@@ -174,12 +174,12 @@ export const Tiempo = () => {
 
   
 
-  const {data, hasError, isFetching, fetchData } = useFetch<Tiempo>({url: `https://api.weatherapi.com/v1/forecast.json?key=7063e0eef0a245ec9ef82322231307&q=${location}&days=3&aqi=no&alerts=no`});
+  const {data, fetchData } = useFetch<Tiempo>({url: `https://api.weatherapi.com/v1/forecast.json?key=7063e0eef0a245ec9ef82322231307&q=${location}&days=3&aqi=no&alerts=no`});
       
 
   return (
-    <div className='flex flex-col justify-center items-center bg-amber-200 h-screen w-screen'>
-      <div className='w-3/6 shadow-black shadow-2xl bg-slate-200 max-w-screen-md border rounded-xl flex flex-col justify-center items-center p-5' >
+    <div className='flex flex-col justify-center items-center bg-gradient-to-r from-teja to-beige h-screen w-screen'>
+      <div className='w-3/6 shadow-black shadow-2xl bg-verde/80 max-w-screen-md rounded-xl flex flex-col justify-center items-center p-5' >
           <div className='flex flex-col min-h-1/3 gap-10 w-screen justify-center items-center'>
             <img src={data?.current.condition.icon} alt={data?.current.condition.text} />
             <h1>Ciudad: {data?.location.name}</h1>
@@ -193,18 +193,21 @@ export const Tiempo = () => {
             ))}
         </div>
 
-        <div className='flex flex-row space-x-6 mb-8 mt-8 justify-around'>
-            <div className='flex flex-col '>
-                <h2> Ciudad: </h2>
-                <Input value={location} onChange={(e) => setLocation(e.target.value)} />
-            </div>
-            <div className='border rounded p-2 bg-sky-500 wi' >
-                <Boton text='Dime el tiempo' onClick={fetchData} />
-            </div>
-            <div>
-                <Button text="Principal" onClick={() => navigate('/')} />
-            </div>
-        </div>
+    <div className='flex flex-row space-x-40 '>
+          <div className='flex flex-col mb-8 mt-8'>
+              <div className='flex flex-col '>
+                  <h2> Ciudad: </h2>
+                  <Input value={location} onChange={(e) => setLocation(e.target.value)} />
+              </div>
+              <div className='border-2 rounded p-2 bg-teja/80 h-10 mt-5 grid place-content-center' >
+                  <Boton text='Dime el tiempo' onClick={fetchData} />
+              </div>
+          </div>
+
+              <div>
+                  <Button text="Principal" onClick={() => navigate('/')} />
+              </div>
+        </div>      
       </div>
     </div>
   )

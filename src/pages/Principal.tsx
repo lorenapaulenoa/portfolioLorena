@@ -16,6 +16,7 @@ export const Principal = () => {
 
   return (
     <>
+    <div className='bg-gradient-to-r from-beige to-teja'>
       <div className='contenedor'>
         <div className='uno'>
           <p className='titulo'>CONTACTO</p>
@@ -67,6 +68,7 @@ export const Principal = () => {
           <CardPeque2 text='Proyecto4 - REACT' url='https://github.com/lorenapaulenoa' img={github} />
         </div>
       </div>
+    </div>
     </>
   )
 }
