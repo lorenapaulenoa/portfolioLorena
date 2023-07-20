@@ -15,8 +15,7 @@ export const Principal = () => {
   const navigate = useNavigate();
 
   return (
-    <>
-    <div className='bg-gradient-to-r from-beige to-teja'>
+    <div className='bg-gradient-to-r from-beige to-teja h-screen w-screen'>
       <div className='contenedor'>
         <div className='uno'>
           <p className='titulo'>CONTACTO</p>
@@ -29,7 +28,7 @@ export const Principal = () => {
           <div className='botonesYfoto'>
             <div className='enlaces'>
               <p className='logosEnlaces'><a href={curriculum} target='_blank' ><img src={PDF} /></a></p>
-              <p className='logosEnlaces'><a href='https://www.linkedin.com/in/lorena-paule-sanchez-bb465b260' target='_blank'><img src={linkedin} /></a></p>
+              <p className='logosEnlaces'><a href='https://www.linkedin.com/in/lorena-paule-sánchez-67a259231' target='_blank'><img src={linkedin} /></a></p>
               <p className='logosEnlaces'><a href='https://github.com/lorenapaulenoa' target='_blank'><img src={github} /></a></p>
             </div>
             <div> <img className='foto' src={foto}></img></div>
@@ -42,6 +41,7 @@ export const Principal = () => {
         </div>
         <div className='cuatro'>
           <p className='titulo'>SKILLS</p>
+          <p> Aprendiendo ...</p>
           <p className='skills'>Lenguajes de programación:</p>
           <p>HTML, CSS, JavaScript, Java, SQL </p>
           <p className='skills'>Frameworks y librerías:</p>
@@ -69,7 +69,6 @@ export const Principal = () => {
         </div>
       </div>
     </div>
-    </>
   )
 }
 

@@ -2,65 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-.root {
-    padding: 20px;
 
-}
 .contenedor {
     width: 90%;
-    max-width: 1000px;
-    height: 95vh;
-    /* border: 1px solid #000; */
+    max-width: 100vh;
+    height: 100%;
     margin: auto;
-    /* font-size: 15px; */
     line-height: 30px;
     text-align: center;
-    /* padding-top: 20px; */
     background: #637373;
     border: solid #637373 15px;
-    
+
 }
 
-.contenedor > div {
-    display: block;      /* para que abarque todo el espacio disponible */
+.contenedor>div {
+    display: block;
+    /* para que abarque todo el espacio disponible */
     padding: 0px;
     color: #181717;
     background: #2f89fc;
-    box-shadow: 2px 2px 10 rgba(0,0,0,25);
-    /* border-radius: 9px; */
+    box-shadow: 2px 2px 10 rgba(0, 0, 0, 25);
+    
 }
 
 .contenedor {
     display: grid;
     grid-gap: 15px;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(16,1fr);
+    grid-template-rows: repeat(16, 1fr);
 }
 
 .contenedor .uno {
     background: #ff9a76;
     grid-row-start: 1;
     grid-row-end: 8;
-    
+
 }
+
 .contenedor .dos {
     background: #ffeadb;
     grid-row-start: 1;
     grid-row-end: 7;
     grid-column-start: 2;
     grid-column-end: 4;
-    /* background-image: url('./assets/imagenes/fotoCV6.png');
-    background-repeat: no-repeat;
-    background-position: right; */
     text-align: center;
 
 }
+
 .contenedor .tres {
     background: #679b9b;
     grid-row-start: 1;
     grid-row-end: 9;
 
 }
+
 .contenedor .cuatro {
     background: #679b9b;
     grid-row-start: 8;
@@ -84,8 +79,8 @@
     grid-column-end: 4;
     grid-row-start: 13;
     grid-row-end: 17;
-    
-    
+
+
 }
 
 .contenedor .siete {
@@ -151,7 +146,7 @@ img {
 
 .foto {
     height: 160px;
-   
+
 
 }
 
@@ -163,4 +158,76 @@ img {
 
 .email {
     font-size: 12px;
+}
+
+@media (max-width: 600px) {
+    .contenedor {
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(26, 1fr);
+        overflow-y: auto;
+    }
+
+    .contenedor .uno {
+        background: #ff9a76;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .contenedor .dos {
+        background: #ffeadb;
+        grid-row-start: 5;
+        grid-row-end: 8;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        text-align: center;
+    }
+
+    .contenedor .tres {
+        background: #679b9b;
+        grid-row-start: 9;
+        grid-row-end: 12;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .contenedor .cuatro {
+        background: #679b9b;
+        grid-row-start: 13;
+        grid-row-end: 16;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .contenedor .cinco {
+        background: rgb(243, 243, 237);
+        grid-row-start: 17;
+        grid-row-end: 20;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        padding: 25px;
+    }
+
+    .contenedor .seis {
+        background: #ff9a76;
+        grid-row-start: 21;
+        grid-row-end: 24;
+        grid-column-start: 1;
+        grid-column-end: 4;
+
+
+    }
+
+    .contenedor .siete {
+        background: #ffeadb;
+        grid-row-start: 25;
+        grid-row-end: 26;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
 }
