@@ -9,10 +9,10 @@ interface CardPequeProps {
 
 export const CardPeque2: React.FC<CardPequeProps> = ({ img, text, url }) => {
     return (
-        <div className='border-2 rounded-lg bg-teja hover:bg-gradient-to-r from-teja to-beige p-5 shadow-black shadow-md mt-8 mb-8 ml-4 mr-4' >
-            <a href={url} target='_blank'>
+        <div className=' flex border-2 rounded-lg bg-beige hover:bg-gradient-to-r from-teja to-beige shadow-black p-1 shadow-md  text-xs sm:text-xl ' >
+            <a href={url} target='_blank' className='flex flex-row justify-between w-full items-center'>
                 {text}
-                <img src={img} />
+                <img className='h-4' src={img} />
             </a>
         </div>
     )

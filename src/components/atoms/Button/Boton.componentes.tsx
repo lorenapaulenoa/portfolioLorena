@@ -7,7 +7,7 @@ interface BotonProps {
 
 export const Boton: React.FC<BotonProps> = ({ onClick, text }) => {
 
-  let style = 'py-2 px4 rounded font-semibold'
+  let style = 'rounded font-semibold text-xs sm:text-xl'
   
   return (
     <div>

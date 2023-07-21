@@ -179,34 +179,34 @@ export const Tiempo = () => {
 
   return (
     
-    <div className='flex flex-col justify-center items-center bg-gradient-to-r from-teja to-beige h-screen w-screen'>
-      <h1 className='text-4xl mb-10'>PREDICCIÓN METEOROLÓGICA</h1>
-      <div className='w-3/6 shadow-black shadow-2xl bg-verde/80 max-w-screen-md rounded-xl flex flex-col justify-center items-center p-5' >
-          <div className='flex flex-col min-h-1/3 gap-10 w-screen justify-center items-center'>
+    <div className='flex flex-col justify-center items-center bg-gradient-to-r from-teja to-beige h-screen w-screen p-2'>
+      <h1 className='text-sm sm:text-4xl mt-2 mb-2'>PREDICCIÓN METEOROLÓGICA</h1>
+      <div className='w-full sm:w-2/4 m-4 shadow-black shadow-2xl bg-verde/80 max-w-screen-md rounded-xl flex flex-col justify-center items-center' >
+          <div className='flex flex-col min-h-1/3 gap-4 w-screen justify-center items-center'>
             <img src={data?.current.condition.icon} alt={data?.current.condition.text} />
-            <h1>Ciudad: {data?.location.name}</h1>
-            <h1>País: {data?.location.country}</h1>
-            <h2>Temperatura: {data?.current.temp_c}</h2>
-            <h2>Velocidad del viento: {data?.current.wind_kph}</h2>
+            <h1 className='text-xs sm:text-xl'>Ciudad: {data?.location.name}</h1>
+            <h1 className='text-xs sm:text-xl'>País: {data?.location.country}</h1>
+            <h2 className='text-xs sm:text-xl'>Temperatura: {data?.current.temp_c}</h2>
+            <h2 className='text-xs sm:text-xl'>Velocidad del viento: {data?.current.wind_kph}</h2>
           </div>
-        <div className='flex flex-row justify-between w-full mt-8 space-x-4'>
+        <div className='flex flex-row justify-between w-full mt-8 gap-1 p-2'>
             {data?.forecast.forecastday.map((elemento) => (
               <CardPeque day={elemento}></CardPeque>
             ))}
         </div>
 
-    <div className='flex flex-row space-x-40 '>
-          <div className='flex flex-col mb-8 mt-8'>
+    <div className='flex flex-col sm:flex-row sm:space-x-4 '>
+          <div className='flex flex-col mb-8 mt-5'>
               <div className='flex flex-col '>
-                  <h2> Ciudad: </h2>
+                  <h2 className='text-xs sm:text-xl'> Ciudad: </h2>
                   <Input value={location} onChange={(e) => setLocation(e.target.value)} />
               </div>
-              <div className='border-2 rounded p-2 bg-teja/80 h-10 mt-5 grid place-content-center' >
+              <div className='border-2 rounded p-2 bg-teja/80 mt-3 grid place-content-center' >
                   <Boton text='Dime el tiempo' onClick={fetchData} />
               </div>
           </div>
 
-              <div>
+              <div className='grid place-content-center'>
                   <Button text="Principal" onClick={() => navigate('/')} />
               </div>
         </div>      
@@ -214,10 +214,3 @@ export const Tiempo = () => {
     </div>
   )
 }
-
-
-
-
-
-
-
