@@ -6,7 +6,7 @@ import linkedin from '../assets/imagenes/linkedin.png'
 import github from '../assets/imagenes/github.png'
 import email from '../assets/imagenes/email.png'
 import { Button } from '../components/atoms/Button/Button.component';
-import foto from '../assets/imagenes/avatar.png'
+
 import { CardPeque2 } from '../components/atoms/Cards/CardPeque2';
 
 
@@ -35,7 +35,7 @@ export const Principal = () => {
                 <p className='logosEnlaces'><a href='https://www.linkedin.com/in/lorena-paule-sánchez-67a259231' target='_blank'><img className='w-5 sm:w-10' src={linkedin} /></a></p>
                 <p className='logosEnlaces'><a href='https://github.com/lorenapaulenoa' target='_blank'><img className='w-5 sm:w-10' src={github} /></a></p>
               
-                <img className='h-10 sm:h30 ml-4' src={foto}></img>
+                
             </div>
           </div>
 
