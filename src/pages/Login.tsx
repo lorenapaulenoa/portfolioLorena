@@ -77,7 +77,7 @@ export const Login = () => {
                 <Input2 value={formData.password} onChange={onChange} text='Contraseña' name='password' type='password' />
                   <div className="flex flex-row"> 
                     <h1 className='text-xs sm:text-xl'>¿No tienes una cuenta?</h1>
-                    <button type="button" onClick={() => navigate('/registro')}><h1 className="underline ml-1 text-xs sm:text-xl">Registrarse</h1></button>
+                    <button type="button" onClick={() => navigate('/registro')}><h1 className="underline ml-2 text-xs sm:text-xl">Registrarse</h1></button>
                   </div>
                 
                 <div className=" flex flex-col sm:flex-row items-center justify-between p-8" >
