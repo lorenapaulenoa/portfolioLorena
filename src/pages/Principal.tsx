@@ -15,7 +15,7 @@ export const Principal = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='bg-verde/50  h-full w-screen flex justify-center p-2'>
+    <div className='bg-verde/50  h-screen w-screen flex justify-center p-2'>
       <div className='grid grid-cols-2 gap-2 bg-transparent w-5/6 h-[95%] sm:max-w-5xl'>
 
           <div className='bg-beige grid place-content-center rounded-xl'>
