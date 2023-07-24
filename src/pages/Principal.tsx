@@ -16,9 +16,9 @@ export const Principal = () => {
 
   return (
     <div className='bg-gradient-to-r from-beige via-verde to-teja h-screen w-screen flex justify-center'>
-      <div className='grid grid-cols-2 gap-2 bg-[#637373] w-5/6 h-screen sm:max-w-5xl border-8 border-[#637373]'>
+      <div className='grid grid-cols-2 gap-2 bg-[#637373] w-5/6 h-screen sm:max-w-5xl border-8 border-[#637373] rounded-xl'>
 
-          <div className='bg-beige grid place-content-center'>
+          <div className='bg-beige grid place-content-center rounded-xl'>
             <p className='text-center font-bold text-xs sm:text-xl m-4'>CONTACTO</p>
             {/* <p className='text-xs sm:text-xl text-center'>email: </p> */}
             {/* <p className='text-xs sm:text-xl'>lorena.paule.sanchez@gmail.com</p> */}
@@ -27,7 +27,7 @@ export const Principal = () => {
             </div>
           </div>
 
-          <div className='bg-verde grid place-content-center'>
+          <div className='bg-verde grid place-content-center rounded-xl'>
               <p className='text-center font-bold text-xs sm:text-xl'>Lorena Paule Sánchez</p>
           
             <div className='flex flex-row mt-4 justify-between'>
@@ -39,7 +39,7 @@ export const Principal = () => {
             </div>
           </div>
 
-          <div className='bg-teja grid place-content-center p-2'>
+          <div className='bg-teja grid place-content-center p-2 rounded-xl'>
               <p className='text-center font-bold text-xs sm:text-xl'>SKILLS</p>
               <p className='text-xs sm:text-xl text-justify m-2 font-bold'> Aprendiendo ...</p>
               <p className='text-xs sm:text-xl text-justify m-2'>Lenguajes de programación:</p>
@@ -50,7 +50,7 @@ export const Principal = () => {
               <p className='text-xs sm:text-xl text-justify m-2 indent-4'>Visual Studio Code, Eclipse, Netbeans</p>
           </div>
 
-          <div className='bg-beige grid place-content-center p-4'>
+          <div className='bg-beige grid place-content-center p-4 rounded-xl'>
               <p className='text-center font-bold text-xs sm:text-xl mb-3'>ABOUT ME</p>
               <p className='text-justify text-xs sm:text-xl m-4'>Soy una persona organizada, dinámica,
                 comprometida, con espíritu de superación y
@@ -58,13 +58,13 @@ export const Principal = () => {
               </p>
           </div>
 
-          <div className='bg-verde grid place-content-center'>
+          <div className='bg-verde grid place-content-center rounded-xl'>
               <Button text='Registro' onClick={() => navigate('/registro')} />
               <Button text='Login' onClick={() => navigate('/login')} />
               <Button text='Tiempo' onClick={() => navigate('/tiempo')} />
           </div>
 
-          <div className='bg-teja grid place-content-center gap-1 p-1'>
+          <div className='bg-teja grid place-content-center gap-1 p-1 rounded-xl'>
               <p className='text-center font-bold text-xs sm:text-xl mb-4'> PROYECTOS</p>
               <CardPeque2 text='Proyecto1 - SQL' url='https://github.com/lorenapaulenoa/SQL' img={github} />
               <CardPeque2 text='Proyecto2 - JAVA' url='https://github.com/lorenapaulenoa/JAVA' img={github} />
