@@ -15,8 +15,8 @@ export const Principal = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='bg-gradient-to-r from-beige via-verde to-teja h-screen w-screen flex justify-center'>
-      <div className='grid grid-cols-2 gap-2 bg-[#637373] w-5/6 h-screen sm:max-w-5xl border-8 border-[#637373] rounded-xl'>
+    <div className='bg-verde/50  h-full w-screen flex justify-center p-2'>
+      <div className='grid grid-cols-2 gap-2 bg-transparent w-5/6 h-[95%] sm:max-w-5xl'>
 
           <div className='bg-beige grid place-content-center rounded-xl'>
             <p className='text-center font-bold text-xs sm:text-xl m-4'>Enviar mensaje</p>
