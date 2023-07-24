@@ -5,6 +5,7 @@ import { Registro } from "../pages/Registro";
 import { Tiempo } from '../pages/Tiempo';
 import { Login } from "../pages/Login";
 import { ProtectedRoutes } from "./Protected.routes";
+import { ContactUs } from "../pages/Contact";
 
 export const AppRoutes = () => {
   return (
@@ -15,6 +16,7 @@ export const AppRoutes = () => {
         <Route element={<ProtectedRoutes />}>
           <Route path="/tiempo" element={<Tiempo />}/>
         </Route>
+        <Route path="/contact" element={<ContactUs />}/>
         <Route path="*" element={<NoEncontrado />}/>
     </Routes>
   )

@@ -180,7 +180,14 @@ export const Tiempo = () => {
   return (
     
     <div className='flex flex-col justify-center items-center bg-gradient-to-r from-teja to-beige h-screen w-screen p-2'>
-      <h1 className='text-sm sm:text-4xl mt-2 mb-2'>PREDICCIÓN METEOROLÓGICA</h1>
+
+<div className="flex flex-col items-center h-screen w-screen p-4">
+
+            <div className="w-24">
+                    <Button text="Inicio" onClick={() => navigate('/')} />
+            </div>
+
+      <h1 className='text-sm sm:text-4xl mt-4 mb-2'>PREDICCIÓN METEOROLÓGICA</h1>
       <div className='w-full sm:w-2/4 m-4 shadow-black shadow-2xl bg-verde/80 max-w-screen-md rounded-xl flex flex-col justify-center items-center' >
           <div className='flex flex-col min-h-1/3 gap-4 w-screen justify-center items-center'>
             <img src={data?.current.condition.icon} alt={data?.current.condition.text} />
@@ -206,11 +213,12 @@ export const Tiempo = () => {
               </div>
           </div>
 
-              <div className='grid place-content-center'>
+              {/* <div className='grid place-content-center'>
                   <Button text="Principal" onClick={() => navigate('/')} />
-              </div>
+              </div> */}
         </div>      
       </div>
+    </div>
     </div>
   )
 }

@@ -4,7 +4,7 @@ import curriculum from '../assets/CV.pdf';
 import PDF from '../assets/imagenes/PDF.png'
 import linkedin from '../assets/imagenes/linkedin.png'
 import github from '../assets/imagenes/github.png'
-import email from '../assets/imagenes/email.png'
+
 import { Button } from '../components/atoms/Button/Button.component';
 
 import { CardPeque2 } from '../components/atoms/Cards/CardPeque2';
@@ -19,11 +19,12 @@ export const Principal = () => {
       <div className='grid grid-cols-2 gap-2 bg-[#637373] w-5/6 h-screen sm:max-w-5xl border-8 border-[#637373] rounded-xl'>
 
           <div className='bg-beige grid place-content-center rounded-xl'>
-            <p className='text-center font-bold text-xs sm:text-xl m-4'>CONTACTO</p>
+            <p className='text-center font-bold text-xs sm:text-xl m-4'>Enviar mensaje</p>
             {/* <p className='text-xs sm:text-xl text-center'>email: </p> */}
             {/* <p className='text-xs sm:text-xl'>lorena.paule.sanchez@gmail.com</p> */}
             <div className='grid place-content-center'>
-              <p className='datosContacto'><a href="mailto:lorena.paule.sanchez@gmail.com" target='_blank'><img className='w-5' src={email} /></a></p>
+              {/* <p className='datosContacto'><a href="mailto:lorena.paule.sanchez@gmail.com" target='_blank'><img className='w-5' src={email} /></a></p> */}
+              <Button text='Contacto' onClick={() => navigate('/contact')} />
             </div>
           </div>
 
